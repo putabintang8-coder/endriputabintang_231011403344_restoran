@@ -5,21 +5,12 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
-/**
- * Koneksi Database MySQL via JDBC
- * Database: db_restoran_231011403344
- * Tugas Akhir - Endri Puta Bintang - 231011403344
- *
- * CATATAN PENTING:
- * Sesuaikan USER dan PASSWORD MySQL lo di bawah ini.
- * Default XAMPP: user = "root", password = "" (kosong)
- * Default Laragon: user = "root", password = "" (kosong)
- */
+
 public class KoneksiDB {
 
     private static final String URL = "jdbc:mysql://localhost:3306/db_restoran_231011403344";
     private static final String USER = "root";
-    private static final String PASSWORD = ""; // ganti sesuai konfigurasi MySQL lo
+    private static final String PASSWORD = ""; 
 
     private static Connection connection;
 
