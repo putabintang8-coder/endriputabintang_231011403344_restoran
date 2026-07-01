@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-    Build script untuk RestoranApp
-    Tugas Akhir - Endri Puta Bintang - 231011403344
 
-    Project ini dibuat sebagai "Java with Existing Sources" / standard
-    Java SE project. Saat dibuka di NetBeans (File > Open Project),
-    NetBeans akan otomatis melengkapi nbproject/build-impl.xml sendiri
-    begitu project pertama kali di-build (Clean and Build).
--->
 <project name="RestoranApp" default="default" basedir=".">
     <description>Sistem Informasi Restoran - Menu &amp; Pesanan</description>
 
