@@ -11,14 +11,10 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
 
-/**
- * DAO (Data Access Object) untuk tabel menu_pesanan
- * Semua query menggunakan PreparedStatement (aman dari SQL Injection)
- * Tugas Akhir - Endri Puta Bintang - 231011403344
- */
+
 public class MenuPesananDAO {
 
-    // ================= CREATE (Tambah) =================
+    
     public boolean tambah(MenuPesanan m) {
         String sql = "INSERT INTO menu_pesanan (kode, nama, harga, jumlah, keterangan) VALUES (?, ?, ?, ?, ?)";
         Connection conn = KoneksiDB.getConnection();
@@ -36,7 +32,6 @@ public class MenuPesananDAO {
         }
     }
 
-    // ================= READ (Lihat semua data) =================
     public List<MenuPesanan> getAll() {
         List<MenuPesanan> list = new ArrayList<>();
         String sql = "SELECT * FROM menu_pesanan ORDER BY id ASC";
@@ -53,7 +48,7 @@ public class MenuPesananDAO {
         return list;
     }
 
-    // ================= READ (Cari berdasarkan nama / kode) =================
+   
     public List<MenuPesanan> cari(String keyword) {
         List<MenuPesanan> list = new ArrayList<>();
         String sql = "SELECT * FROM menu_pesanan WHERE nama LIKE ? OR kode LIKE ? ORDER BY id ASC";
@@ -73,10 +68,9 @@ public class MenuPesananDAO {
         return list;
     }
 
-    // ================= READ (Urutkan data) =================
     public List<MenuPesanan> getAllSorted(String kolom, boolean ascending) {
         List<MenuPesanan> list = new ArrayList<>();
-        // whitelist kolom agar aman (tidak menerima input bebas ke query)
+        
         String kolomAman;
         switch (kolom) {
             case "harga": kolomAman = "harga"; break;
@@ -99,7 +93,7 @@ public class MenuPesananDAO {
         return list;
     }
 
-    // ================= UPDATE (Ubah) =================
+  
     public boolean update(MenuPesanan m) {
         String sql = "UPDATE menu_pesanan SET kode=?, nama=?, harga=?, jumlah=?, keterangan=? WHERE id=?";
         Connection conn = KoneksiDB.getConnection();
@@ -118,7 +112,6 @@ public class MenuPesananDAO {
         }
     }
 
-    // ================= DELETE (Hapus) =================
     public boolean hapus(int id) {
         String sql = "DELETE FROM menu_pesanan WHERE id=?";
         Connection conn = KoneksiDB.getConnection();
@@ -132,7 +125,6 @@ public class MenuPesananDAO {
         }
     }
 
-    // ================= Cek kode unik (validasi sebelum tambah) =================
     public boolean kodeSudahAda(String kode) {
         String sql = "SELECT id FROM menu_pesanan WHERE kode=?";
         Connection conn = KoneksiDB.getConnection();
