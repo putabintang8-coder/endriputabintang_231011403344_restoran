@@ -8,10 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
 
-/**
- * DAO untuk proses Login (tabel user)
- * Tugas Akhir - Endri Puta Bintang - 231011403344
- */
+
 public class UserDAO {
 
     public boolean login(String username, String password) {
