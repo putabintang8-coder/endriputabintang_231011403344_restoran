@@ -1,3 +1,0 @@
-Taruh file mysql-connector-j-x.x.x.jar di folder ini.
-Download dari: https://dev.mysql.com/downloads/connector/j/
-Lihat README.md di folder utama untuk panduan lengkap.
