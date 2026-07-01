@@ -1,9 +1,6 @@
 package restoranapp.model;
 
-/**
- * Model untuk entitas Menu & Pesanan
- * Tugas Akhir - Endri Puta Bintang - 231011403344
- */
+
 public class MenuPesanan {
     private int id;
     private String kode;
