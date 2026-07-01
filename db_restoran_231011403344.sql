@@ -1,18 +1,9 @@
--- =====================================================
--- Database: db_restoran_231011403344
--- Tugas Akhir Pemrograman 2
--- Nama   : Endri Puta Bintang
--- NIM    : 231011403344
--- Objek  : Restoran (Menu & Pesanan)
--- =====================================================
+
 
 DROP DATABASE IF EXISTS db_restoran_231011403344;
 CREATE DATABASE db_restoran_231011403344;
 USE db_restoran_231011403344;
-
--- =====================================================
 -- Tabel user (untuk login)
--- =====================================================
 CREATE TABLE user (
     id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) NOT NULL UNIQUE,
@@ -21,11 +12,8 @@ CREATE TABLE user (
 
 INSERT INTO user (username, password) VALUES
 ('admin', 'admin123');
-
--- =====================================================
 -- Tabel menu_pesanan
 -- Entitas Utama: Menu & Pesanan (kode, nama, harga, jumlah)
--- =====================================================
 CREATE TABLE menu_pesanan (
     id INT AUTO_INCREMENT PRIMARY KEY,
     kode VARCHAR(20) NOT NULL UNIQUE,
@@ -34,11 +22,8 @@ CREATE TABLE menu_pesanan (
     jumlah INT NOT NULL,
     keterangan VARCHAR(150) NULL
 );
-
--- =====================================================
--- 10 data minimal (buatan sendiri)
+-- 10 data minimal 
 -- Data pertama memuat nama & NIM mahasiswa sebagai bukti orisinalitas
--- =====================================================
 INSERT INTO menu_pesanan (kode, nama, harga, jumlah, keterangan) VALUES
 ('MN001', 'Nasi Goreng Spesial (by Endri Puta Bintang - 231011403344)', 25000, 12, 'Pesanan favorit pelanggan'),
 ('MN002', 'Mie Ayam Bakso', 20000, 8, 'Topping bakso sapi'),
