@@ -1,9 +1,6 @@
 package restoranapp.model;
 
-/**
- * Model untuk entitas User (Login)
- * Tugas Akhir - Endri Puta Bintang - 231011403344
- */
+
 public class User {
     private int id;
     private String username;
