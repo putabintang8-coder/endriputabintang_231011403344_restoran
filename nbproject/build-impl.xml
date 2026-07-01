@@ -9,11 +9,7 @@
         </condition>
     </fail>
     <target depends="test,jar,javadoc" description="Build and test whole project." name="default"/>
-    <!-- 
-                ======================
-                INITIALIZATION SECTION 
-                ======================
-            -->
+    
     <target name="-pre-init">
       
     </target>
